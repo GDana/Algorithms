@@ -1,4 +1,4 @@
-package done;
+package dataStructrue;
 
 import java.util.Scanner;
 
@@ -7,7 +7,7 @@ public class A2750 {
 		/* 수 정렬하기
 		 * https://www.acmicpc.net/problem/2750
 		 * 
-		 * 자료구조 '삽입 정렬' 실습을 위해 다시 풀어봄
+		 * 자료구조 : 삽입 정렬 
 		 */
 		
 		/* 수도코드
