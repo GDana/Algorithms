@@ -26,4 +26,17 @@ public class A2751 {
 		
 		
 	}
+	
+	public static void merge(int arr[], int left, int mid, int right) {
+		int i = left;
+		int j = mid + 1;
+		int k = left;
+		int temp[] = new int[arr.length];
+		
+		while(i <= mid && j <= right) {
+			if(arr[i] < arr[j]) {
+				temp[k++] = arr[i++];
+			}
+		}
+	}
 }
