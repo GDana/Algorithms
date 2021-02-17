@@ -29,9 +29,9 @@
 
 ## Programmers
 - level1 : level1 문제들 
- - [done]() : 완료
- - [inProgress]() : 풀고 있는 문제
- - [retry]() : 다시 풀어볼 문제
+  - [done]() : 완료
+  - [inProgress]() : 풀고 있는 문제
+  - [retry]() : 다시 풀어볼 문제
 - level2
 - ..
 
