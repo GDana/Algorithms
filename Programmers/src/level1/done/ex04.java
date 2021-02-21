@@ -5,6 +5,7 @@ import java.util.Calendar;
 public class ex04 {
 	
 	public static void main(String[] args) {
+		// 코딩테스트 연습 > 연습문제 > 2016년 
 		System.out.println(solution(1, 1));
 	}
 
