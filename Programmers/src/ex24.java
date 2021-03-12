@@ -15,6 +15,7 @@ public class ex24 {
 	}
 	
 	public static String solution2(String phone_number) {
+		System.out.println("::::: 다른 사람 풀이 :::::");
 	     char[] ch = phone_number.toCharArray();
 	     for(int i = 0; i < ch.length - 4; i ++){
 	         ch[i] = '*';
