@@ -14,6 +14,11 @@ public class ex29 {
 		 * 4. arrlist 크기만큼 answer 길이 초기화
 		 * 4. arrlist 반복문을 돌면서 answer요소 추가 
 		 */
+		
+		/*
+		 * Integer형 ArrayList배 int형으로 바꾸는 법 
+		 * https://bit.ly/3bIcVmo 
+		 */
 
 		solution(12345);
 	}
