@@ -4,6 +4,7 @@ public class ex10 {
 
 	public static void main(String[] args) {
 		// 코딩테스트 연습 > 연습문제 > 문자열 다루기 기본 
+		// 다시풀기 완료 
 
 		String str1 = "a234";
 		String str2 = "1234";
