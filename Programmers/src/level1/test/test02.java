@@ -3,7 +3,7 @@ package level1.test;
 public class test02 {
 
 	public static void main(String[] args) {
-		// 코딩테스트 연습 > 연습문제 > 시저 암호 
+		// [실패] 코딩테스트 연습 > 연습문제 > 시저 암호 
 		/*
 		 * 1. String -> char[]
 		 * 2. char[] 반복문 

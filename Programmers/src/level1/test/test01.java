@@ -3,7 +3,7 @@ package level1.test;
 public class test01 {
 
 	public static void main(String[] args) {
-		// 코딩테스트 연습 > 연습문제 > 문자열 다루기 기본
+		// [성공] 코딩테스트 연습 > 연습문제 > 문자열 다루기 기본
 		/*
 		 * 1. 문자열 길이 체크 
 		 * 2. Integer형으로 형변환 되는지 체크

@@ -3,7 +3,7 @@ package level1.test;
 public class test03 {
 
 	public static void main(String[] args) {
-		// 코딩테스트 연습 > 연습문제 > 가운데 글자 가져오기 
+		// [성공] 코딩테스트 연습 > 연습문제 > 가운데 글자 가져오기 
 		/*
 		 * 1. idx = s.length() / 2
 		 * 2. if(s.length() % 2 == 0)

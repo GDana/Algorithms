@@ -3,7 +3,7 @@ package level1.test;
 public class test05 {
 
 	public static void main(String[] args) {
-		// 코딩테스트 연습 > 연습문제 > 소수 찾기 
+		// [실패] 코딩테스트 연습 > 연습문제 > 소수 찾기 
 
 		//solution(10);
 		//solution(5);

@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class test04 {
 
 	public static void main(String[] args) {
-		// 코딩테스트 연습 > 연습문제 > 문자열 내 마음대로 정렬하기 
+		// [실패] 코딩테스트 연습 > 연습문제 > 문자열 내 마음대로 정렬하기 
 		/*
 		 * 1. n번째 인덱스의 텍스트를 얻는다. 
 		 * 2. 각각 오름차순으로 비교한 배열 생성 
