@@ -1,6 +1,6 @@
 package level1.test;
 
-public class text02 {
+public class test02 {
 
 	public static void main(String[] args) {
 		// 코딩테스트 연습 > 연습문제 > 시저 암호 
