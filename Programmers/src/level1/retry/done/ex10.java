@@ -4,7 +4,7 @@ public class ex10 {
 
 	public static void main(String[] args) {
 		// 코딩테스트 연습 > 연습문제 > 문자열 다루기 기본 
-		// 다시풀기 완료 
+		// 다시풀기 완료
 
 		String str1 = "a234";
 		String str2 = "1234";
@@ -13,14 +13,39 @@ public class ex10 {
 		//System.out.println(solution(str2));
 		
 	}
+	
+	public static boolean solution2(String s) {
+		System.out.println("::::: 다시풀기 성공한 코드 :::::");
+        boolean answer = true;
+        char[] arr = s.toCharArray();
+        
+        if(s.length() != 4 && s.length() != 6) {
+        	System.out.println("길이가 짧음: " + s.length());
+        	answer = false;
+        }        
+		
+		for(int i = 0; i < arr.length; i++) {
+			System.out.print((int)arr[i] + " ");
+			int temp = (int)arr[i];
+			
+			if(!(48 <= temp && temp <= 57)) {
+				System.out.println("숫자가 아닌 값이 들어옴: " + (char)temp);
+				answer = false;
+				break;
+			}
+		}
+		
+		System.out.println(answer);
+        
+        return answer;
+    }
 
 	public static boolean solution(String s) {
+		System.out.println("::::: 처음 제출했던 코드 :::::");
         boolean answer = true;
         
         System.out.println("HEX vs INT");
         for(int i=0; i<s.length(); i++) {
-        	
-        	
         	
         	/*
 			int ch = s.charAt(i);
