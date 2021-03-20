@@ -19,10 +19,38 @@ public class test02 {
 		//solution("AB", 1);	//BC
 		//solution("z", 1);	//a
 		//solution("a B z", 4);	//e F d
-		solution("   ", 1);
+		
+	}
+	
+	public static String solution4(String s, int n) {
+		System.out.println("::::: 다른 사람 풀이 :::::");
+		StringBuilder sb = new StringBuilder();
+		 
+		for (int i = 0; i < s.length(); i++) {
+			char ch = s.charAt(i);	//문자열 각 자리를 charAt()으로 참조 
+ 
+			if (ch >= 'a' && ch <= 'z') {	//문자가 소문자인지 체크 
+				ch = (char) (ch + n);		//거리 n만큼 더한다. 
+				System.out.println("ch: " +  ch);
+				if (ch > 'z') {		//더한 값이 'z'를 넘는다면 
+					ch -= 26;
+					System.out.println("ch > z: " + ch);
+				}
+			} else if (ch >= 'A' && ch <= 'Z') {	//문자가 대문자인지 체크 
+				ch = (char) (ch + n);		//거리 n만큼 더한다. 
+				if (ch > 'Z')
+					ch -= 26;
+			}
+ 
+			sb.append(ch);
+		}
+		System.out.println(sb.toString());
+ 
+		return sb.toString();
 	}
 
-	public static String solution(String s, int n) {
+	public static String solution2(String s, int n) {
+		System.out.println("::::: 다시 풀기 :::::");
         String answer = "";
         char[] arr = s.toCharArray();
         
