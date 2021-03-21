@@ -8,6 +8,7 @@ public class ex15 {
 
 	public static void main(String[] args) {
 		// 코딩테스트 연습 > 연습문제 > 시저 암호 
+		// 풀이중 
 		/*
 		 * s를 공백을 포함해 문자열 배열에 담는다
 		 * 배열 원소를 16진수로 변환
