@@ -4,6 +4,7 @@ public class ex20 {
 
 	public static void main(String[] args) {
 		// 코딩테스트 연습 > 연습문제 > 콜라츠 추측
+		// 다시풀기 완료
 		/*
 		 * 1. 짝수, 음수 체크 
 		 * 2. 체크 결과에 따른 분기문
@@ -17,7 +18,32 @@ public class ex20 {
 
 	}
 	
-	public static int solution2(int num) {
+	public static int solution2(long num) {
+		System.out.println("::::: 다시 풀기(1) :::::");
+        int answer = 0;
+        
+        while(true) {	//num이 1이 될 때 까지 반복
+        	if(num == 1) {
+	        	break;
+	        }
+        	
+	        if(num % 2 == 0) {
+	        	num /= 2;
+	        }else {
+	        	num = num * 3 + 1;
+	        }	        
+	        answer++;
+	        //System.out.println("num: " + num);
+	        if(answer == 500) {
+	        	answer = -1;
+	        	break;
+	        }
+        }
+        System.out.println("answer: " + answer);
+        return answer;
+    }
+	
+	public static int solution1(int num) {
         int answer;
         int curr = num;
         int temp = 0;
