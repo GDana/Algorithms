@@ -1,4 +1,4 @@
-package level1.retry;
+package level1.retry.done;
 
 import java.util.Arrays;
 
@@ -27,11 +27,48 @@ public class ex26 {
 		 * 5. 만약 num == 0 같다면 최대공약수는 1 
 		 */
 		
-		//solution2(3, 12);
-		solution2(2, 5);
+		solution2(3, 12);	//3, 12		
+		solution2(2, 5);	//1, 10
 	}
 	
 	public static int[] solution2(int n, int m) {
+		System.out.println("::::: 다시 풀기(1) :::::");
+		int[] answer = new int[2];
+		int a = n;
+		int b = m;
+		int r, q;
+		
+		int lcm = 1;
+		
+		while(true) {
+			//q = a / b;
+			r = a % b;
+			//System.out.println(a + " = " + q + " * " + b + " + " + r);
+			
+			if(r == 0) {
+				break;
+			}
+			
+			a = b;
+			b = r;
+		}
+		
+		if(b == 1) {
+			System.out.println("서로소이다 " + b);
+		}else {
+			System.out.println("최대공약수는 " + b + "이다.");
+		}		
+		lcm = (n * m) / b;
+		System.out.println("최대공배수는 " + lcm + "이다.");
+		
+		answer[0] = b;
+		answer[1] = lcm;
+		
+		System.out.println(Arrays.toString(answer));
+		return answer;
+	}
+	
+	public static int[] solution1(int n, int m) {
 		int[] answer = new int[2];
 		int sum = 0;
 		
