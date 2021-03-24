@@ -28,12 +28,10 @@
 <br>
 
 ## Programmers
-- level1 : level1 문제들 
+#### level1 : 총 56문제
   - [done](https://github.com/GDana/Algorithms/tree/master/Programmers/src/level1/done) : 완료
   - [inProgress](#) : 풀고 있는 문제
   - [retry](#) : 다시 풀어볼 문제
-- level2
-- ..
 
 <br>
 
