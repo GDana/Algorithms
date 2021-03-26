@@ -1,7 +1,8 @@
-package level1.retry;
+package level1.retry.done;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class ex08 {
 
@@ -19,18 +20,40 @@ public class ex08 {
 		String[] str1 = {"sun", "bed", "car"};
 		String[] str2 = {"abce", "abcd", "cdx"};
 		
-		solution(str1, 1);
-		solution(str2, 2);
+		solution1(str1, 1);
+		//solution2(str2, 2);
 	}
+	
+	
+	public static String[] solution1(String[] strings, int n) {
+		System.out.println("::::: 다시 풀기(1) :::::");		
+        String[] answer = new String[strings.length];
+        
+        for(int i = 0; i < strings.length; i++) {
+        	String temp = strings[i].substring(n, n+1); 
+        	strings[i] = temp + strings[i];
+        	
+        	//System.out.println(strings[i]);
+        }
+        Arrays.sort(strings);
+        
+        for(int i = 0; i < strings.length; i++) {
+        	answer[i] = strings[i].substring(1, strings[i].length());
+        	
+        	//System.out.println(strings[i]);
+        }
+                
+        return answer;
+    }
 	public static String[] solution(String[] strings, int n) {
+		System.out.println("::::: 처음 제출했던 코드 :::::");
         String[] answer = new String[strings.length];
         String[] idxArr = new String[strings.length];
         String[] ascArr = new String[strings.length];
         
         for(int i=0; i<strings.length; i++) {
         	idxArr[i] = strings[i].substring(n, n+1);
-        }
-        
+        }        
         ascArr = Arrays.copyOfRange(idxArr, 0, idxArr.length);
         Arrays.sort(ascArr);
         
@@ -44,12 +67,7 @@ public class ex08 {
         		}
         	}
         }
-        
-        for(String str : answer) {
-        	System.out.print(str + " ");
-        }
-        System.out.println();
-        
+       
         return answer;
     }
 }
