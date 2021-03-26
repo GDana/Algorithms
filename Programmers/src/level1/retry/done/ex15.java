@@ -8,7 +8,7 @@ public class ex15 {
 
 	public static void main(String[] args) {
 		// 코딩테스트 연습 > 연습문제 > 시저 암호 
-		// 풀이중 
+		// 다시풀기 완료  
 		/*
 		 * s를 공백을 포함해 문자열 배열에 담는다
 		 * 배열 원소를 16진수로 변환
@@ -54,13 +54,30 @@ public class ex15 {
 		System.out.println(new String(Integer.toHexString(d)));
 		*/
 		
-		//solution3("AB", 1);	//BC
-		solution4("}", 1);
-		//solution3("a B z", 4);	//e F d		
+		
+		
+		solution5("AB", 1);	//BC	
+		solution5("z", 1);
+		solution5("a B z", 4);	//e F d		
 	}
 	
 	public static String solution999(String s, int n) {
 		System.out.println("::::: 다른 사람 풀이 :::::");
+		/*
+		테스트 1 〉	통과 (0.03ms, 52.3MB)
+		테스트 2 〉	통과 (0.05ms, 52.2MB)
+		테스트 3 〉	통과 (0.04ms, 52.4MB)
+		테스트 4 〉	통과 (0.03ms, 52.8MB)
+		테스트 5 〉	통과 (0.04ms, 52.3MB)
+		테스트 6 〉	통과 (0.04ms, 51.9MB)
+		테스트 7 〉	통과 (0.04ms, 52.2MB)
+		테스트 8 〉	통과 (0.09ms, 52.2MB)
+		테스트 9 〉	통과 (0.04ms, 55.1MB)
+		테스트 10 〉	통과 (0.04ms, 52.1MB)
+		테스트 11 〉	통과 (0.06ms, 52.6MB)
+		테스트 12 〉	통과 (0.04ms, 52.4MB)
+		테스트 13 〉	통과 (1.84ms, 53.5MB)
+		 */
 		StringBuilder sb = new StringBuilder();
 		 
 		for (int i = 0; i < s.length(); i++) {
@@ -86,10 +103,69 @@ public class ex15 {
 		return sb.toString();
 	}
 	
+	public static String solution5(String s, int n) {
+		System.out.println("::::: 다시 풀기(4) :::::");
+		System.out.println("solution4 코드 개선");
+		/*
+		테스트 1 〉	통과 (14.70ms, 53.3MB)
+		테스트 2 〉	통과 (17.10ms, 53.5MB)
+		테스트 3 〉	통과 (14.59ms, 53.2MB)
+		테스트 4 〉	통과 (12.79ms, 53.7MB)
+		테스트 5 〉	통과 (12.62ms, 54MB)
+		테스트 6 〉	통과 (14.64ms, 52.6MB)
+		테스트 7 〉	통과 (12.59ms, 52.5MB)
+		테스트 8 〉	통과 (12.61ms, 53.7MB)
+		테스트 9 〉	통과 (12.55ms, 53.5MB)
+		테스트 10 〉	통과 (13.23ms, 52.6MB)
+		테스트 11 〉	통과 (13.61ms, 53.4MB)
+		테스트 12 〉	통과 (14.22ms, 54.7MB)
+		테스트 13 〉	통과 (40.28ms, 71.1MB)
+		*/
+        String answer = "";
+        char[] arr = s.toCharArray();
+        
+        for(int i = 0; i < arr.length; i++) {
+        	System.out.println("(char)arr[i] + n=" + (char)(arr[i] + n));
+        	
+        	if(arr[i] >= 'a' && arr[i] <= 'z') {
+        		arr[i] = (char) (arr[i] + n);
+        		
+        		if(arr[i] > 'z') {	//소문자보다 큰 아스키코드가 들어온다면
+        			arr[i] = (char) (arr[i] - 26);
+        		}
+        	}else if(arr[i] >= 'A' && arr[i] <= 'Z') {
+        		arr[i] = (char) (arr[i] + n);
+        		
+        		if(arr[i] > 'Z') {
+        			arr[i] = (char) (arr[i] - 26);
+        		}
+        	}
+        	
+        	answer += (char)arr[i];	//대소문자 이외의 값(빈값)
+        	
+        	/*
+        	if(arr[i] == 'z' || arr[i] == 'Z') {
+        		arr[i] = (char) (arr[i] - (25 - (n - 1)));
+        		answer += (char)arr[i];
+        	}
+        	else {	
+        		/*
+        		1. 대문자보다 소문자의 아스키코드 값이 크다
+        		2. 대문자보다 작거나, 대문자보다 크고 소문자보다 작거나, 소문자보다 큰 아스키코드가 들어오면 안된다.
+        		
+        		answer += (char)(arr[i] + n);
+        	}
+        	*/        	
+        }
+        System.out.println(answer);
+        
+        return answer;
+    }
+	
 	public static String solution4(String s, int n) {
 		System.out.println("::::: 다시 풀기(3) :::::");
 		System.out.println("string -> char -> string");
-		System.out.println("a-z, A-Z 이외의 값은 고려하지 않았으니까 고려한 코드");
+		System.out.println("a-z, A-Z 이외의 값은 고려하지 않은 코드");
 		
         String answer = "";
         char[] arr = s.toCharArray();
