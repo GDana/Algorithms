@@ -1,4 +1,4 @@
-package leve2.retry;
+package level2.retry;
 
 import java.util.ArrayList;
 import java.util.Arrays;
