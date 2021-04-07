@@ -1,4 +1,4 @@
-package level2.retry;
+package level2.retry.done;
 
 public class ex03 {
 
@@ -15,10 +15,47 @@ public class ex03 {
 			System.out.println("false");
 		}*/
 		
-		System.out.println(solution2("()()"));		//true
-		System.out.println(solution2("(())()"));		//true
-		System.out.println(solution2(")()("));		//false
-		System.out.println(solution2("(()("));		//false 
+		int num = 0;
+		num--;
+//		System.out.println(num);
+		
+		System.out.println(solution3("()()"));		//true
+		//System.out.println(solution3("(())()"));		//true
+		//System.out.println(solution3(")()("));		//false
+		//System.out.println(solution3("(()("));		//false 
+	}
+	
+	static boolean solution3(String s) {
+		/**
+		 '('와 ')'가 한쌍이므로 +1과 -1 연산의 반복이다.
+		 때문에 true가 되는 조건은 count가 항상 0이여야 한다.
+		 */
+		boolean answer = true;
+		char[] ch = s.toCharArray();
+		
+		int count = 0;
+        for(int i = 0; i < ch.length; i++) {
+        	if(ch[i] == '(') {
+        		count++;
+        		System.out.println("(: " + count);
+        	}else if(ch[i] == ')') {
+        		count--;
+        		System.out.println("): " + count);
+        	}        	
+        	
+        	// ')'가 많을 경우 음수
+            if(count < 0) {
+            	System.out.println("count: " + count);
+            	return false;
+            }
+        }
+        
+       // '('가 많을 경우 양수값 
+       if(count > 0) {
+    	   return false;
+       }
+        
+        return answer;
 	}
 
 	static boolean solution2(String s) {
