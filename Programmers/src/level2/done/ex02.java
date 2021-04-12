@@ -1,14 +1,47 @@
-package level2.retry;
+package level2.done;
 
 public class ex02 {
 	public static void main(String[] args) {
 		// 코딩테스트 연습 > 연습문제 > JadenCase 문자열 만들기 
+		// +15
 		
 		
-		System.out.println(solution("3people unFollowed me"));	//"3people Unfollowed Me", 21
-		//System.out.println(solution("for the last week"));		//"For The Last Week", 17
+		System.out.println(solution2("3people unFollowed me "));	//"3people Unfollowed Me", 21
+		//System.out.println(solution2("for the last week"));		//"For The Last Week", 17
 	}
-	
+	public static String solution2(String s) {
+		/*
+		테스트 1 〉	통과 (0.07ms, 53.7MB)
+		테스트 2 〉	통과 (0.08ms, 52.1MB)
+		테스트 3 〉	통과 (0.09ms, 52.6MB)
+		테스트 4 〉	통과 (0.12ms, 52.5MB)
+		테스트 5 〉	통과 (0.10ms, 52.4MB)
+		테스트 6 〉	통과 (0.08ms, 53.1MB)
+		테스트 7 〉	통과 (0.06ms, 51.7MB)
+		테스트 8 〉	통과 (0.06ms, 51.6MB)
+		테스트 9 〉	통과 (0.08ms, 52.3MB)
+		테스트 10 〉	통과 (0.05ms, 51.9MB)
+		테스트 11 〉	통과 (0.10ms, 52.4MB)
+		테스트 12 〉	통과 (0.10ms, 52.5MB)
+		테스트 13 〉	통과 (0.08ms, 52.1MB)
+		테스트 14 〉	통과 (0.09ms, 52.8MB)
+		테스트 15 〉	통과 (0.11ms, 52.4MB)
+		테스트 16 〉	통과 (0.08ms, 53.2MB)
+		 */
+		StringBuilder sb = new StringBuilder();
+		sb.append(s.toLowerCase());
+		
+		for(int i = 0; i < s.length(); i++) {
+			if(s.charAt(i) == ' ' && i != s.length()-1) {
+				String str = s.substring(i+1, i+2).toUpperCase();
+				sb.replace(i+1, i+2, str);
+			}
+		}
+		String temp = s.substring(0, 1).toUpperCase();
+		sb.replace(0, 1, temp);
+		
+        return sb.toString();
+	}
 	public static String solution(String s) {
 		/*
 		 1. 공백 기준으로 첫글자를 판단한다.
