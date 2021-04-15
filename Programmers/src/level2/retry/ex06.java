@@ -6,8 +6,70 @@ public class ex06 {
 		// 코딩테스트 연습 > 연습문제 > 땅따먹기 
 
 		int[][] land = {{1,2,3,5},{5,6,7,8},{4,3,2,1}};
-		solution(land);
+		solution2(land);
 	}
+	
+	static int solution2(int[][] land) {
+		/**
+		 테스트 1 〉	실패 (0.31ms, 52.7MB)
+		테스트 2 〉	실패 (0.29ms, 53MB)
+		테스트 3 〉	실패 (0.31ms, 52.8MB)
+		테스트 4 〉	실패 (0.28ms, 53.4MB)
+		테스트 5 〉	실패 (0.29ms, 52.5MB)
+		테스트 6 〉	실패 (0.29ms, 53MB)
+		테스트 7 〉	실패 (0.31ms, 53MB)
+		테스트 8 〉	실패 (0.30ms, 52.7MB)
+		테스트 9 〉	실패 (0.26ms, 53.3MB)
+		테스트 10 〉	실패 (0.28ms, 52.1MB)
+		테스트 11 〉	실패 (0.30ms, 53MB)
+		테스트 12 〉	실패 (0.29ms, 53.4MB)
+		테스트 13 〉	실패 (0.28ms, 55.9MB)
+		테스트 14 〉	실패 (0.32ms, 52.6MB)
+		테스트 15 〉	실패 (0.30ms, 52.8MB)
+		테스트 16 〉	실패 (0.27ms, 54.6MB)
+		테스트 17 〉	실패 (0.29ms, 52.4MB)
+		테스트 18 〉	실패 (0.28ms, 52.4MB)
+		
+		테스트 1 〉	실패 (12.20ms, 86.6MB)
+		테스트 2 〉	실패 (11.11ms, 85.5MB)
+		테스트 3 〉	실패 (10.18ms, 86MB)
+		테스트 4 〉	실패 (10.62ms, 86MB)
+		 */
+        int answer = 0;
+        int idx = 0;
+        int count = 0;
+        
+        for(int i = 0; i < land.length; i++) {
+        	int big = land[i][0];
+        	int tempIdx = 0;
+        	
+        	System.out.println("count: " + count);
+        	for(int j = 1; j < land[i].length; j++) {
+        		if(count == 1) {
+        			if(idx == j) continue;
+        		}
+        		
+        		if(count > 1) {
+        			count = 0;
+        		}
+        		
+				if (idx != j && big < land[i][j]) {
+					big = land[i][j];
+					tempIdx = j;
+				}
+        	}
+        	
+        	count++;
+        	idx = tempIdx;
+        	answer += big;
+        	System.out.println("현재 행에서 가장 큰 값: " + big);
+        	System.out.println("현재 행에서 가장 큰 값의 인덱스: " + tempIdx);
+        	System.out.println("결과값: " + answer);        	
+        }
+        
+
+        return answer;
+    }
 
 	static int solution(int[][] land) {
 		/**
