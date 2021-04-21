@@ -9,6 +9,23 @@ public class ex06 {
 		solution2(land);
 	}
 	
+	static int solution3(int[][] land) {
+		int answer = 0;
+		/*
+		 * 동적계획법으로 풀어야 함
+		| 1 | 2 | 3 | 5 |
+		| 5 | 6 | 7 | 8 |
+		| 4 | 3 | 2 | 1 |
+
+		| 1 | 2 | 3 | 5 |
+		| 10 | 11 | 12 | 8 |
+		| 4 | 3 | 2 | 1 |
+		 */
+		
+		
+		return answer;
+	}
+	
 	static int solution2(int[][] land) {
 		/**
 		 테스트 1 〉	실패 (0.31ms, 52.7MB)
