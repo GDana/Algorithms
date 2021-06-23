@@ -1,4 +1,4 @@
-package inProgress;
+package done;
 
 import java.util.Scanner;
 
@@ -81,6 +81,9 @@ public class A10845 {
 	}
 
 	public static void main(String[] args) {
+		/**
+		 * 시간 초과 
+		 */
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("----- 명령의 수를 입력하세요. -----");
