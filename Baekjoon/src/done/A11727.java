@@ -65,7 +65,7 @@ public class A11727 {
 		
 		if(arr[num] != 0) return arr[num];	//재귀이기 때문에 중복값을 사용할 수 있음을 고려  
 		
-		return arr[num] = (topDown(num - 1) + (topDown(num - 2) * 2) % 10007) % 10007;
+		return arr[num] = (topDown(num - 1) + topDown(num - 2) * 2) % 10007;
 	}
 	
 	//bottm-up, 136ms
@@ -75,7 +75,7 @@ public class A11727 {
 		arr[2] = 3;
 		
 		for(int i = 3; i <= num; i++) {
-			arr[i] = (arr[i-1] + (arr[i-2] * 2) % 10007) % 10007;
+			arr[i] = (arr[i-1] + arr[i-2] * 2) % 10007;
 		}
 		
 		return arr[num];
