@@ -38,6 +38,10 @@ public class A11727 {
 	 * '모양1'를 2개 사용해서 만드는 것은 
 	 * 결국 기본 '모양1'를 중복해서 사용하는 것이 되기 때문에 
 	 * 기본 모양으로써 점화식에 세울 수가 없다.  
+	 * 
+	 * 
+	 * [참고링크] 
+	 * https://www.youtube.com/watch?v=YHZiWaL49HY&t=453s
 	 */
 
 	static int[] arr = new int[1001];
